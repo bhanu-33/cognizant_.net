@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Appointment System</title>
+</head>
+<body>
+    <header>
+        <h1>Book Your Medical Appointment</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="dept">Department:</label>
+            <input type="text" id="dept" list="dept-list" placeholder="Type department...">
+            <datalist id="dept-list">
+                <option value="Cardiology">
+                <option value="Neurology">
+                <option value="Pediatrics">
+            </datalist>
+
+            <label for="doctor">Preferred Doctor:</label>
+            <input type="text" id="doctor" list="doctor-list">
+            <datalist id="doctor-list">
+                <option value="Dr. Smith">
+                <option value="Dr. Adams">
+            </datalist>
+
+            <label for="app-date">Appointment Date:</label>
+            <input type="date" id="app-date" min="2024-05-20" required> <label for="app-time">Preferred Time:</label>
+            <input type="time" id="app-time">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="0" max="120" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" title="Please enter exactly 10 digits" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="reports">Upload Medical Reports:</label>
+            <input type="file" id="reports" multiple>
+
+            <label>
+                <input type="checkbox" id="emergency" onchange="document.getElementById('app-time').disabled = this.checked;"> 
+                Emergency Case (Disables time selection)
+            </label>
+
+            <button type="submit">Confirm Appointment</button>
+        </form>
+    </main>
+</body>
+</html>

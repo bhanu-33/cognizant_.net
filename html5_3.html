@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Certification Program Registration</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction Video</h2>
+            <video controls width="600">
+                <source src="intro.mp4" type="video/mp4">
+                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default>
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <label for="registration-progress">Enrollment Progress:</label>
+            <progress id="registration-progress" value="40" max="100"></progress>
+
+            <form>
+                <label for="course">Select Course:</label>
+                <input type="text" id="course" list="course-list" required>
+                <datalist id="course-list">
+                    <option value="Full Stack Development">
+                    <option value="Data Science">
+                    <option value="Cyber Security">
+                </datalist>
+
+                <label for="batch">Select Batch Month:</label>
+                <input type="month" id="batch" required>
+
+                <label for="session">Preferred Session Timing:</label>
+                <input type="time" id="session" required>
+
+                <label for="skill">Rate your current skill level:</label>
+                <input type="range" id="skill" min="1" max="10" value="5">
+
+                <button type="submit">Enroll Now</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
