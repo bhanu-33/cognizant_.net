@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 2: User Info Display</title>
+</head>
+<body>
+    <button onclick="triggerDisplay()">Show User Info</button>
+    
+    <div id="userInfo">
+        </div>
+
+    <script>
+        
+        let user = {
+            name: "Ananya",
+            age: 25,
+            city: "Hyderabad"
+        };
+
+        
+        function displayUserInfo(userObj) {
+            let container = document.getElementById("userInfo");
+            
+            
+            container.innerHTML = `
+                <p>Name: ${userObj.name}</p>
+                <p>Age: ${userObj.age}</p>
+                <p>City: ${userObj.city}</p>
+            `;
+        }
+
+        function triggerDisplay() {
+            displayUserInfo(user);
+        }
+    </script>
+</body>
+</html>

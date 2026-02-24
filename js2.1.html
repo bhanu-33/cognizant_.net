@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 1: Greeting Generator</title>
+</head>
+<body>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <button id="greetBtn" onclick="handleGreet()">Generate Greeting</button>
+    
+    <p id="greetingOutput"></p>
+
+    <script>
+        
+        function generateGreeting(name) {
+            
+            let message = "Hello, " + name + "! Welcome to our website.";
+            document.getElementById("greetingOutput").innerText = message;
+        }
+
+        function handleGreet() {
+            let nameInput = document.getElementById("userName").value;
+            generateGreeting(nameInput); }
+    </script>
+</body>
+</html>

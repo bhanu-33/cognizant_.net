@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 4: Student Manager</title>
+    <style>
+        .profile-box { border: 2px solid #333; padding: 10px; width: 200px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <button onclick="handleUpdate()">Update Marks to 95</button>
+    <div id="studentDisplay"></div>
+
+    <script>
+        
+        let student = {
+            name: "Vikram",
+            rollNo: "CS101",
+            marks: 85
+        };
+
+        
+        function updateStudentProfile(studentObj) {
+            let display = document.getElementById("studentDisplay");
+            display.innerHTML = `
+                <div class="profile-box">
+                    <h3>${studentObj.name}</h3>
+                    <p>Roll No: ${studentObj.rollNo}</p>
+                    <p>Marks: ${studentObj.marks}</p>
+                </div>
+            `;
+        }
+
+        
+        function updateMarks(newMarks) {
+            student.marks = newMarks; 
+            updateStudentProfile(student); 
+        }
+
+        function handleUpdate() {
+            updateMarks(95);
+        }
+
+        
+        updateStudentProfile(student);
+    </script>
+</body>
+</html>
