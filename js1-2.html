@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1: Responsiveness</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            font-size: 18px;
+        }
+        nav ul {
+            display: flex; 
+            gap: 20px;
+            list-style: none;
+        }
+
+        
+        @media (max-width: 600px) {
+            body {
+                background-color: #f0f8ff; 
+                font-size: 14px; 
+            }
+            nav ul {
+                flex-direction: column; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+    </nav>
+    <h1>Responsive Adaptability Test</h1>
+    <p>Resize the browser or use "Responsive Mode" to see changes[cite: 10].</p>
+</body>
+</html>
